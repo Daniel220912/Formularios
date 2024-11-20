@@ -11,23 +11,24 @@
     </style>
 </head>
 <body>
-     <!-- <form action="#" method="post" enctype="multipart/form-data"> Cuando envias cosas como img y demas se pone lo de la izquierda--> <!--Cuando es solo texto solo post -->
+     <!-- <form action="#" method="post" enctype="multipart/form-data"> Cuando envias cosas como img y demas se pone lo de la izquierda--> 
      
-    <form action="#">
+    <form action="#" method="get" autocomplete="off">
             <div class="my-input">
                 <label for="nombre"> Nombre</label>
-                <input type="text" name="nombre" id="nombre" placeholder="tu nombre aqui">
+                <input type="text" name="nombre" id="nombre" placeholder="tu nombre aqui" required size="20">
             </div>
 
             <div class="my-input">
                 <label for="apellidos"> Apellidos</label>
-                <input type="text" name="apellidos" id="apellidos"> <!-- name sirve solo para ver los datos cuando lo enviamos --> 
+                <input type="text" name="apellidos" id="apellidos" autofocus> <!-- name sirve solo para ver los datos cuando lo enviamos --> 
             </div>
 
             <!-- Imagen
             <input type="file" name="imagen"> -->
             
             <!-- Que diferencia hay entre un checkbox y un radio button -->
+             <!-- Ejemplo radio button -->
              <p>Selecciona tu postre favorito</p>
              <input type="radio" name="postre-favorito" id="tarta-queso" value="tarta de queso">
              <label for="tarta-queso">Tarta de queso</label>
@@ -39,14 +40,58 @@
               <!-- DEBEN DE TENER TODOS EL MISMO name PARA SELECCIONAR SOLO 1     -->
 
               <br>
-              <input type="radio" name="postre-favorito" id="helado" value="helados">
+               <input type="radio" name="postre-favorito" id="helado" value="helados"> <!--VALUE SIRVE PARA TENER UN TEXTO INICIAL -->
               <label for="tarta-queso">Helado</label>
               <br>
 
               <input type="radio" name="postre-favorito" id="ninguno" value="ninguno" checked>
               <label for="ninguno">No me gustan</label>
               <br>
+
+              <p>Elije algunos Hobbies</p>
+              <input type="checkbox" name="hobbie-1" id="hobbie-1" value="futbol" checked>
+              <label for="hobbie-1">Jugar al fútbol</label>
+              <br>
+              <input type="checkbox" name="hobbie-2" id="hobbie-2" tabindex="1">
+              <label for="hobbie-2">Hacer maquetas</label>
+              <br>
+              <input type="checkbox" name="hobbie-3" id="hobbie-3" value="padel">
+              <label for="hobbie-3">Jugar al padel</label>
+              <br>
+                <p>Escribe tu email</p>
+                <label for="email">Email </label>
+                <input type="email" name="email" id="email">
+                <br>
+                <br>
+                <!-- Textos más largos -->
+                 <label for="description">Que te cuentas?</label> <br>
+                 <textarea wrap="soft" cols="20" rows="20" name="description" id="description" placeholder="Texto interior..."></textarea>
+                  <br>
+                   
+                <!-- Numero -->
+                 <input type="number" value="0" min="0" max="20" step="2">
+                 <input type="range" name="range" id="range" value="0" min="3" max="6" >
+                 <output>0</output>
+
+                 <!--Campos de seleccion de opiniones -->
+                 <label for="cars">Elige un coche</label>
+                 <select name="cars" id="cars">
+                    <optgroup label="europeos">
+                        <option value="">-</option>
+                        <option value="Fiat">Fiat</option>
+                        <option value=" bmw">BMW</option>
+                        <option value="volvo">Volvo</option>
+                        <option value="audi">Audi</option>
+                    </optgroup>
+                    <optgroup label="otros">
+                        <option value="kia">Kia</option>
+                        <option value="opel">Opel</option>
+
+                    </optgroup>
+                 </select>
+                 <br>
               
+              <!-- El type submit envia el formulario -->
               <div class="my-input">
                 <input type="submit">
            </div>
